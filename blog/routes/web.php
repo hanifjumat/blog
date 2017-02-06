@@ -27,8 +27,16 @@ Route::get('contact', 'PagesController@contact');
 
 Route::group(['middleware'=>'auth'],function(){
 
+	//categories routes
+	Route::resource('categories','CategoryController',['except'=>['create']]);
+
+	//posts routes
 	Route::resource('posts','PostController');
+
+	//authentication logout routes
 	Route::get('/logout', 'Auth\LoginController@logout');
+
+	//slug routes
 	Route::get('blog/{slug}',['as'=>'blog.single','uses'=>'BlogController@getSingle'])->where('slug','[\w\d\-\_]+');
 
 

@@ -19,6 +19,15 @@
 
 					<br>
 
+					{!! Form::label('categories','Category: ', []) !!}
+					<select name="category_id" id="" class="form-control">
+						@foreach($categories as $category)
+							<option value="{{$category->id}}">{{$category->name}}</option>
+
+						@endforeach
+					</select>
+					<br>
+
  					{!! Form::label('body', 'Body: ') !!}
  					{!! Form::textarea('body', null,array('class'=>'form-control')) !!}
  					

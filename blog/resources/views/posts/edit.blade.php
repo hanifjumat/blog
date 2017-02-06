@@ -19,6 +19,11 @@
 			
 			<br>
 
+			{!! Form::label('category_id','Category: ', []) !!}
+			{!! Form::select('category_id', $categories, null, ['class'=>'form-control']) !!}
+
+			<br>
+
 			{!! Form::label('body', 'Body') !!}
 			{!! Form::textarea('body', null, ["class"=>'form-control input-lg']) !!}
 

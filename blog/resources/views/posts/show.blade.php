@@ -16,6 +16,11 @@
 					<p><a href="{{url('blog/'.$post->slug)}}">{{url($post->slug)}}</a></p>
 					<p><a href="{{route('blog.single',$post->slug)}}">{{url($post->slug)}}</a></p>
 				</dl>
+				
+				<dl class="dl-horizontal">
+					<label>Category: </label>
+					<p>{{$post->category->name}}</p>
+				</dl>
 
 				<dl class="dl-horizontal">
 					<label>Create At: </label>
