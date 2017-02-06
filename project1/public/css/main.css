@@ -1,0 +1,15 @@
+.main-logo{
+	height: 100px;
+}
+.navbar-nav li a, .navbar-brand {
+    line-height: 90px;
+    height: 100px;
+    padding-top: 0;
+    font-size:20px !important;
+}
+
+.profile-img{
+	max-width: 150px;
+	border:1px solid #90A4AE;
+	border-radius:100%;
+}
